@@ -1,0 +1,23 @@
+
+.qualities-head {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.qualities {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  list-style: none;
+
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 2vh;
+  column-gap: 1vw;
+  text-align: none;
+}
+
+.icon-flag {
+  width: 2rem;
+  height: auto;
+}

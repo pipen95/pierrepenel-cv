@@ -1,0 +1,40 @@
+.contact {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-content: flex-end;
+  justify-content: flex-end;
+
+
+  &__name {
+    grid-row: 1/2;
+    font-size: 8rem;
+    display: flex;
+    flex:1;
+    align-items: center;
+  }
+
+  &__info {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    & li {
+      margin-left: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+
+    &:hover, &:focus {
+      fill:var(--color-4);
+      cursor: pointer;
+    } 
+  }    
+
+}

@@ -1,0 +1,204 @@
+:root {
+  --color-1: #062633;
+  --color-2: #17556d;
+  --color-3: rgb(89, 131, 146);
+  --color-4: rgba(27, 146, 110, 0.623);
+  --color-5: #f5f8ef;
+  --color-grey:rgb(66, 66, 66);
+  --font-title: 'Oswald', sans-serif;
+  --font-text: 'Open Sans', sans-serif; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-image: linear-gradient(to right bottom, #91c4d6, #598392);
+  color: var(--color-grey);
+  font-family: var(--font-text); }
+
+h1, h2, h3 {
+  font-family: var(--font-title); }
+
+h1 {
+  color: var(--color-3);
+  letter-spacing: 3px;
+  margin-right: -8px;
+  font-size: 10rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-3)), to(var(--color-2)));
+  background-image: linear-gradient(to right bottom, var(--color-3), var(--color-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+h2 {
+  color: var(--color-3);
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 2rem; }
+
+h3 {
+  text-transform: uppercase;
+  color: var(--color-2);
+  font-size: 1.5rem;
+  letter-spacing: 0.5px; }
+
+.container {
+  background-color: var(--color-5);
+  width: 70vw;
+  height: min-content;
+  margin: 10vh auto 10vh auto;
+  background-color: #f8f6f6;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), 10px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5rem 5rem 10rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  row-gap: 10vh;
+  column-gap: 3vw; }
+
+.img {
+  border-radius: 5px;
+  height: 20rem;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3), 10px 20px 20px rgba(0, 0, 0, 0.2);
+  grid-column: 1/2;
+  grid-row: 1/2; }
+
+.block {
+  display: grid;
+  row-gap: 5vh; }
+  .block__section {
+    display: grid;
+    row-gap: 1rem; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-2); }
+
+.text {
+  width: 75%;
+  font-weight: 200;
+  text-align: justify;
+  letter-spacing: .5px;
+  font-size: 1.5rem; }
+  .text--hobbies {
+    width: 100%; }
+
+.location {
+  font-weight: 200;
+  text-transform: capitalize; }
+
+.date {
+  color: var(--color-4); }
+
+.contact {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-content: flex-end;
+  justify-content: flex-end; }
+  .contact__name {
+    grid-row: 1/2;
+    font-size: 8rem;
+    display: flex;
+    flex: 1;
+    align-items: center; }
+  .contact__info {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none; }
+    .contact__info li {
+      margin-left: 1rem;
+      font-size: 1.25rem; }
+  .contact__icon {
+    height: 3rem;
+    width: 3rem; }
+    .contact__icon:hover {
+      fill: var(--color-4);
+      cursor: pointer; }
+
+.education-head {
+  padding-top: 4rem;
+  grid-column: 1/2;
+  grid-row: 2/3; }
+
+.education {
+  padding-top: 4rem;
+  grid-column: 2/4;
+  grid-row: 2/3; }
+
+.experience-head {
+  grid-column: 1/2;
+  grid-row: 3/4; }
+
+.experience {
+  grid-column: 2/4;
+  grid-row: 3/4; }
+
+.skills-head {
+  grid-column: 1/2;
+  grid-row: 4/5; }
+
+.skills {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: 10rem 2fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 5vh;
+  column-gap: 1vw; }
+  .skills__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-items: flex-start; }
+  .skills__title {
+    display: flex;
+    align-self: center;
+    justify-self: center; }
+  .skills__icon {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1.5rem; }
+
+.qualities-head {
+  grid-column: 1/2;
+  grid-row: 5/6; }
+
+.qualities {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  list-style: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2vh;
+  column-gap: 1vw;
+  text-align: none; }
+
+.icon-flag {
+  width: 2rem;
+  height: auto; }
+
+.hobbies-head {
+  grid-column: 1/2;
+  grid-row: 6/7; }
+
+.hobbies {
+  grid-column: 2/3;
+  grid-row: 6/7;
+  display: grid;
+  row-gap: 2vh; }
+
+.icon-hobbies {
+  height: 2.5rem;
+  width: 2.5rem; }

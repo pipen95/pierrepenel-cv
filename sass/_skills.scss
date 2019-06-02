@@ -1,0 +1,39 @@
+
+
+.skills-head {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.skills {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: 10rem 2fr;
+ grid-template-rows: 1fr 1fr;
+  row-gap: 5vh;
+  column-gap: 1vw;
+
+
+
+  &__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-items: flex-start;
+
+  }
+
+  &__title {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__icon{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1.5rem;
+  }
+}
+
