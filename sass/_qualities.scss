@@ -1,20 +1,39 @@
 
 .qualities-head {
   grid-column: 1/2;
-  grid-row: 5/6;
+  grid-row: 4/5;
+
+  @media only screen and (max-width:$bp-large){
+    grid-row: 7/8;
+    grid-column: 1/4;
+  }
 }
 
 .qualities {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 4/5;
   list-style: none;
 
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(3,1fr);
-  row-gap: 2vh;
-  column-gap: 1vw;
-  text-align: none;
+  row-gap: 2rem;
+  column-gap: 3vw;
+  text-align:left !important;
+
+  @media only screen and (max-width:$bp-large){
+    grid-row: 8/9;
+    grid-column: 1/4;
+  }
+
+  @media only screen and (max-width:$bp-small){
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  & li {
+    @media only screen and (max-width:$bp-smallest){
+      margin:auto 
+     }
+  }
 }
 
 .icon-flag {
