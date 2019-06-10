@@ -23,7 +23,7 @@ html {
   font-family: var(--font-text); }
   @media only screen and (max-width: 37.5em) {
     html {
-      font-size: 50%; } }
+      font-size: 55%; } }
 
 h1,
 h2,
@@ -34,26 +34,34 @@ h1 {
   color: var(--color-3);
   letter-spacing: 3px;
   margin-right: -8px;
-  font-size: 8rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-3)), to(var(--color-2)));
-  background-image: linear-gradient(to right bottom, var(--color-3), var(--color-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; }
+  font-size: 8rem; }
+  @supports (background-clip: text) and (background-image: linear-gradient()) {
+    h1 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-3)), to(var(--color-2)));
+      background-image: linear-gradient(to right bottom, var(--color-3), var(--color-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; } }
   @media only screen and (max-width: 68.75em) {
     h1 {
       margin-right: 0;
       font-size: 6rem; } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
+    h1 {
+      font-size: 5.5rem; } }
+  @media only screen and (max-width: 25em) {
     h1 {
       font-size: 5rem; } }
+  @media only screen and (max-width: 340px) {
+    h1 {
+      font-size: 4.5rem; } }
 
 h2 {
   color: var(--color-3);
   letter-spacing: 1px;
   font-weight: 300;
   font-size: 2.5rem;
-  margin-top: -8px;
+  margin-top: -12px;
   text-align: right; }
   @media only screen and (max-width: 68.75em) {
     h2 {
@@ -62,7 +70,7 @@ h2 {
   @media only screen and (max-width: 37.5em) {
     h2 {
       margin-top: 1rem; } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     h2 {
       text-align: center; } }
 
@@ -75,7 +83,7 @@ h3 {
   color: var(--color-2);
   font-size: 1.5rem;
   letter-spacing: 0.5px; }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     h3 {
       text-align: center; } }
 
@@ -98,11 +106,15 @@ h3 {
     .container {
       max-width: 90vw;
       margin: 2rem auto; } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     .container {
       padding: 4rem 10vw 8rem 10vw;
-      max-width: 95vw;
-      margin: 2rem; } }
+      row-gap: 4rem;
+      max-width: 100vw;
+      margin: .7rem; } }
+  @media only screen and (max-width: 340px) {
+    .container {
+      row-gap: 3rem; } }
 
 .main {
   display: grid;
@@ -140,6 +152,9 @@ h3 {
       grid-template-rows: repeat(2, min-content);
       grid-template-columns: 1fr;
       row-gap: 5rem; } }
+  @media only screen and (max-width: 31.45em) {
+    .contact-header {
+      row-gap: 3rem; } }
 
 .img {
   border-radius: 5px;
@@ -186,9 +201,6 @@ h3 {
         display: none; } }
     .contact__info--icon {
       display: none; }
-      @media only screen and (max-width: 37.5em) {
-        .contact__info--icon {
-          display: flex; } }
   .contact__icon :hover,
   .contact__icon :focus {
     fill: var(--color-4);
@@ -253,13 +265,14 @@ h3 {
     justify-items: flex-start; }
   .skills__title {
     display: flex;
-    align-self: start;
-    justify-self: center; }
+    align-self: start; }
   .skills__icon {
     height: 3rem;
     width: 3rem;
     margin-right: 1.5rem;
     margin-bottom: 1rem; }
+    .skills__icon :hover {
+      cursor: pointer; }
   @media only screen and (max-width: 68.75em) {
     .skills {
       grid-row: 6/7;
@@ -281,7 +294,10 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   row-gap: 2rem;
   column-gap: 3vw;
-  text-align: left !important; }
+  width: 100%;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem; }
   @media only screen and (max-width: 68.75em) {
     .qualities {
       grid-row: 8/9;
@@ -289,13 +305,15 @@ h3 {
   @media only screen and (max-width: 37.5em) {
     .qualities {
       grid-template-columns: repeat(2, 1fr); } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     .qualities li {
-      margin: auto; } }
+      text-align: center; } }
 
 .icon-flag {
   width: 2rem;
   height: auto; }
+  .icon-flag :hover {
+    cursor: pointer; }
 
 .hobbies-head {
   grid-column: 1/2;
@@ -322,12 +340,14 @@ h3 {
   .hobbies .icon-hobbies {
     height: 2.5rem;
     width: 2.5rem; }
+    .hobbies .icon-hobbies :hover {
+      cursor: pointer; }
 
 .header {
   display: flex;
   justify-content: space-between;
   color: var(--color-2); }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     .header {
       justify-content: center; } }
 
@@ -335,6 +355,7 @@ h3 {
   width: 100%;
   font-weight: 200;
   text-align: justify;
+  text-justify: auto;
   letter-spacing: 0.5px;
   font-size: 1.5rem; }
   .text--hobbies {
@@ -350,7 +371,7 @@ h3 {
     .text {
       margin-top: 1rem; } }
 
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 31.45em) {
   .option {
     text-align: center !important; } }
 
@@ -365,6 +386,6 @@ h3 {
   @media only screen and (max-width: 68.75em) {
     .date {
       text-align: left; } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 31.45em) {
     .date {
       text-align: center; } }
