@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-2);
+
+  @media only screen and (max-width:$bp-smallest){
+    justify-content: center;
+  }
+}
+
+.text {
+  width: 100%;
+  font-weight: 200;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+
+  &--hobbies {
+    margin-top: none;
+
+  }
+
+  &--presentation {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+
+    @media only screen and (max-width:$bp-large){
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width:$bp-large){
+    margin-top: 1rem;
+  }
+}
+
+
+
+.option{
+  @media only screen and (max-width:$bp-smallest){
+    text-align: center !important;
+  }
+}
+
+.location {
+  font-weight: 200;
+  text-transform: capitalize;
+  --color-grey:rgb(56, 55, 55);
+}
+
+.date {
+  color: var(--color-4);
+  text-align: right;
+
+  @media only screen and (max-width:$bp-large){
+    text-align: left;
+  }
+  @media only screen and (max-width:$bp-smallest){
+    text-align:center;
+  }
+}
