@@ -12,14 +12,13 @@
   width: 100%;
   font-weight: 200;
   text-align: justify;
+  text-justify: auto;
   letter-spacing: 0.5px;
   font-size: 1.5rem;
 
   &--hobbies {
     margin-top: none;
-
   }
-
   &--presentation {
     width: 80%;
     text-align: center;
