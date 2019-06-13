@@ -36,7 +36,7 @@
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: min-content 4fr 1fr;
   row-gap: 6rem;
   column-gap: 3vw;
 
