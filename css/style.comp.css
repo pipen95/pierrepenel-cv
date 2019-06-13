@@ -73,6 +73,12 @@ h2 {
   @media only screen and (max-width: 31.45em) {
     h2 {
       text-align: center; } }
+  h2 .recent {
+    font-size: 1.75rem;
+    margin-right: 2rem; }
+    @media only screen and (max-width: 68.75em) {
+      h2 .recent {
+        margin-right: 0; } }
 
 @media only screen and (max-width: 68.75em) {
   #first {
@@ -118,7 +124,7 @@ h3 {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: min-content 4fr 1fr;
   row-gap: 6rem;
   column-gap: 3vw; }
   @media only screen and (max-width: 68.75em) {
