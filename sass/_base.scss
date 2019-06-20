@@ -1,11 +1,12 @@
 :root {
   --color-1: #062633;
   --color-2: #17556d;
+  --color-2-bis: #2983a5;
   --color-3: rgb(89, 131, 146);
   --color-4: rgba(27, 146, 110, 0.623);
 
   --color-5: #f5f8ef;
-  --color-grey: rgb(66, 66, 66);
+  --color-grey: #474646;
 
   // FONT VARIABLES
   --font-title: "Oswald", sans-serif;
@@ -89,6 +90,8 @@ h1 {
   }
 }
 
+
+
 h2 {
   color: var(--color-3);
   letter-spacing: 1px;
@@ -114,7 +117,7 @@ h2 {
     font-size: 1.75rem;
     margin-right:2rem;
     @media only screen and (max-width: $bp-large) {
-      margin-right: 0
+      margin-right: 0;
     }
   }
 }
@@ -124,6 +127,7 @@ h2 {
     margin-top: 0;
   }
 }
+
 
 h3 {
   text-transform: uppercase;
@@ -136,3 +140,20 @@ h3 {
   }
 }
 
+.lien-web{
+  text-transform:none;
+  color: var(--color-2-bis);
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+
+  &:link,
+  &:visited{
+    text-decoration:none;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--color-4);
+    cursor: pointer;
+  }
+}

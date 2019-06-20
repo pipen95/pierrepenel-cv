@@ -1,19 +1,7 @@
 .experience-head {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  
-  @media only screen and (max-width:$bp-large){
-    grid-row: 3/4;
-    grid-column: 1/4;
-  }
+  grid-area: head-2;
 }
 
 .experience {
-  grid-column: 2/4;
-  grid-row: 2/3; 
-
-  @media only screen and (max-width:$bp-large){
-    grid-row: 4/5;
-    grid-column: 1/4;
-  }
+  grid-area: content-2;
 }

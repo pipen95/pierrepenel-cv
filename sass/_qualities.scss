@@ -1,20 +1,12 @@
-
 .qualities-head {
-  grid-column: 1/2;
-  grid-row: 4/5;
-
-  @media only screen and (max-width:$bp-large){
-    grid-row: 7/8;
-    grid-column: 1/4;
-  }
+  grid-area: head-5;
 }
 
 .qualities {
-  grid-column: 2/3;
-  grid-row: 4/5;
+  grid-area: content-5;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 2rem;
   column-gap: 3vw;
   width: 100%;
@@ -22,19 +14,14 @@
   letter-spacing: 0.5px;
   font-size: 1.5rem;
 
-  @media only screen and (max-width:$bp-large){
-    grid-row: 8/9;
-    grid-column: 1/4;
-  }
-
-  @media only screen and (max-width:$bp-small){
-    grid-template-columns: repeat(2,1fr);
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   & li {
-    @media only screen and (max-width:$bp-smallest){
+    @media only screen and (max-width: $bp-smallest) {
       text-align: center;
-     }
+    }
   }
 }
 
@@ -42,8 +29,7 @@
   width: 2rem;
   height: auto;
 
-  & :hover
-   {
+  & :hover {
     cursor: pointer;
   }
 }
