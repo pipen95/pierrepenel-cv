@@ -6,8 +6,7 @@
   grid-area: content-4;
   display: grid;
   grid-template-columns: 10rem 2fr;
-  grid-template-rows: repeat(2, min-content);
-  row-gap: 3rem;
+  grid-template-rows:  min-content;
   column-gap: 1vw;
 
   &__list {

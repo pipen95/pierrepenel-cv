@@ -34,7 +34,7 @@
 
 .main {
   display: grid;
-  grid-template-columns: min-content 4fr 1fr;
+  grid-template-columns: max-content 4fr 1fr;
   grid-template-rows: auto;
   row-gap: 6rem;
   column-gap: 3vw;
@@ -77,10 +77,10 @@
   &__section {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
     @media only screen and (max-width: $bp-large) {
       grid-template-columns: 1fr;
-      row-gap: 0.5rem;
+      row-gap: 0.75rem;
     }
   }
 }
