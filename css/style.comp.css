@@ -226,13 +226,9 @@ strong {
         display: none; } }
     .contact__info--icon {
       display: none; }
-  .contact__icon :hover,
-  .contact__icon :focus {
-    fill: var(--color-4);
-    cursor: pointer; }
-  .contact__icon svg {
-    height: 3rem;
-    width: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .contact__info--icon {
+          display: block; } }
   .contact__langue {
     grid-row: 1/2;
     display: flex;
@@ -243,12 +239,6 @@ strong {
         margin-left: 1.5rem; } }
     .contact__langue a {
       font-size: 1.2rem; }
-      .contact__langue a:link, .contact__langue a:visited {
-        color: var(--color-2-bis);
-        text-decoration: none; }
-      .contact__langue a:hover, .contact__langue a:active {
-        color: var(--color-4);
-        cursor: pointer; }
       .contact__langue a.active {
         font-weight: bold; }
         .contact__langue a.active:hover {
@@ -258,6 +248,16 @@ strong {
     margin: 0 0.5rem;
     font-size: 1.2rem;
     font-weight: bold; }
+  .contact__slider {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: currentColor;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+    padding-top: 1rem;
+    font-size: 1.5rem; }
 
 .education-head {
   grid-area: head-3; }
@@ -379,6 +379,14 @@ strong {
     .date {
       text-align: center; } }
 
+.icon svg {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  fill: var(--color-2) !important; }
+
+.ghost {
+  display: none; }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -426,8 +434,34 @@ strong {
     .date {
       text-align: center; } }
 
+.icon svg {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  fill: var(--color-2) !important; }
+
+.ghost {
+  display: none; }
+
 .project-head {
   grid-area: head-1; }
 
 .project {
   grid-area: content-1; }
+
+.contact__icon :hover, .icon :hover,
+.contact__icon :focus,
+.icon :focus {
+  fill: var(--color-4);
+  cursor: pointer; }
+
+.contact__icon svg, .icon svg {
+  height: 3rem;
+  width: 3rem; }
+
+.contact__langue a:link, .contact__langue a:visited {
+  color: var(--color-2-bis);
+  text-decoration: none; }
+
+.contact__langue a:hover, .contact__langue a:focus {
+  color: var(--color-4);
+  cursor: pointer; }

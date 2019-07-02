@@ -72,20 +72,14 @@
 
     &--icon {
       display: none;
+      @media only screen and (max-width: $bp-small) {
+        display: block;
+      }
     }
   }
 
   &__icon {
-    & :hover,
-    & :focus {
-      fill: var(--color-4);
-      cursor: pointer;
-    }
-
-    & svg {
-      height: 3rem;
-      width: 3rem;
-    }
+    @extend %icon;
   }
 
   &__langue {
@@ -96,19 +90,10 @@
       justify-content: center;
       margin-left: 1.5rem;
     }
+
     & a {
       font-size: 1.2rem;
-      &:link,
-      &:visited {
-        color: var(--color-2-bis);
-        text-decoration: none;
-      }
-
-      &:hover,
-      &:active {
-        color: var(--color-4);
-        cursor: pointer;
-      }
+      @extend %link;
 
       &.active {
         font-weight: bold;
@@ -124,5 +109,17 @@
     margin: 0 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: currentColor;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
   }
 }

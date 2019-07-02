@@ -19,6 +19,7 @@
   &--hobbies {
     margin-top: none;
   }
+
   &--presentation {
     width: 80%;
     text-align: center;
@@ -58,4 +59,18 @@
   @media only screen and (max-width:$bp-smallest){
     text-align:center;
   }
+}
+
+.icon{
+  @extend %icon;
+
+  & svg {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    fill: var(--color-2)!important;
+  }
+}
+
+.ghost {
+  display:none;
 }
