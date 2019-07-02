@@ -8,30 +8,3 @@
   }
 }
 
-// .hobbies {
-//   grid-column: 2/3;
-//   grid-row: 5/6;
-//   display: grid;
-//   row-gap: 3rem;
-
-//   @media only screen and (max-width: $bp-large) {
-//     grid-row: 10/11;
-//     grid-column: 1/4;
-//   }
-
-//   & p {
-//     margin-top: 0;
-//     @media only screen and (max-width: $bp-large) {
-//       margin-top: -12px;
-//     }
-//   }
-
-//   .icon-hobbies {
-//     height: 2.5rem;
-//     width: 2.5rem;
-    
-//     & :hover {
-//       cursor: pointer;
-//     }
-//   }
-// }

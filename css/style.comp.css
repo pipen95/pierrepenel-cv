@@ -70,9 +70,7 @@ h2 {
       text-align: left; } }
   @media only screen and (max-width: 37.5em) {
     h2 {
-      margin-top: 1rem; } }
-  @media only screen and (max-width: 31.45em) {
-    h2 {
+      margin-top: 1rem;
       text-align: center; } }
   h2 .recent {
     font-size: 1.75rem;
@@ -88,11 +86,18 @@ h2 {
 h3 {
   text-transform: uppercase;
   color: var(--color-2);
+  letter-spacing: 0.5px;
+  font-size: 1.5rem; }
+
+h4 {
   font-size: 1.5rem;
-  letter-spacing: 0.5px; }
-  @media only screen and (max-width: 31.45em) {
-    h3 {
-      text-align: center; } }
+  font-weight: 200;
+  text-transform: capitalize;
+  --color-grey:rgb(56, 55, 55); }
+
+h5 {
+  font-size: 1rem;
+  color: var(--color-4); }
 
 .lien-web {
   text-transform: none;
@@ -146,27 +151,39 @@ strong {
   grid-template-areas: "head-1 content-1 content-1" "head-2 content-2 content-2" "head-3 content-3 content-3" "head-4 content-4 ." "head-5 content-5 ."; }
   @media only screen and (max-width: 68.75em) {
     .main {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       row-gap: 4rem;
       column-gap: none;
-      grid-template-areas: "head-1" "content-1" "head-2" "content-2" "head-3" "content-3" "head-4" "content-4" "head-5" "content-5"; } }
+      grid-template-areas: "head-1 head-1" "content-1 content-1 " "head-2 head-2" "content-2 content-2" "head-3 head-3" "content-3 content-3" "head-4 head-4" "content-4 content-4" "head-5 head-5" "content-5 content-5"; } }
   @media only screen and (max-width: 37.5em) {
     .main {
-      row-gap: 3rem; } }
+      row-gap: 3rem;
+      grid-template-columns: 1fr;
+      grid-template-areas: "head-1 " "content-1 " "head-2" "content-2 " "head-3 " "content-3 " "head-4 " "content-4 " "head-5 " "content-5"; } }
 
 .block {
   display: grid;
   row-gap: 4rem;
   column-gap: 3vw; }
+  @media only screen and (max-width: 37.5em) {
+    .block {
+      row-gap: 3rem; } }
   .block__section {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    row-gap: 1.5rem; }
+    grid-template-rows: min-content min-content;
+    row-gap: 1.5rem;
+    grid-template-areas: "header icon" "text ."; }
     @media only screen and (max-width: 68.75em) {
       .block__section {
+        row-gap: 0.75rem;
+        grid-template-areas: "header icon" "text text"; } }
+    @media only screen and (max-width: 37.5em) {
+      .block__section {
         grid-template-columns: 1fr;
-        row-gap: 0.75rem; } }
+        grid-template-rows: repeat 3, min-content;
+        grid-template-areas: "header" "icon" "text"; } }
 
 .contact-header {
   display: grid;
@@ -313,9 +330,7 @@ strong {
   font-size: 1.5rem; }
   @media only screen and (max-width: 37.5em) {
     .qualities {
-      grid-template-columns: repeat(2, 1fr); } }
-  @media only screen and (max-width: 31.45em) {
-    .qualities li {
+      grid-template-columns: repeat(2, 1fr);
       text-align: center; } }
 
 .icon-flag {
@@ -340,52 +355,67 @@ strong {
     .header {
       justify-content: center; } }
 
+.text--presentation {
+  width: 80%;
+  text-align: center;
+  text-justify: auto;
+  margin: 0 auto 0 auto;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 68.75em) {
+    .text--presentation {
+      width: 100%; } }
+
 .text {
+  grid-area: text;
   width: 100%;
   font-weight: 200;
   text-align: justify;
   text-justify: auto;
   letter-spacing: 0.5px;
   font-size: 1.5rem; }
-  .text--hobbies {
-    margin-top: none; }
-  .text--presentation {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 0 auto; }
-    @media only screen and (max-width: 68.75em) {
-      .text--presentation {
-        width: 100%; } }
   @media only screen and (max-width: 68.75em) {
     .text {
       margin-top: 1rem; } }
 
-@media only screen and (max-width: 31.45em) {
+@media only screen and (max-width: 37.5em) {
   .option {
     text-align: center !important; } }
 
-.location {
-  font-weight: 200;
-  text-transform: capitalize;
-  --color-grey:rgb(56, 55, 55); }
+.icon-box {
+  grid-area: icon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; }
+  @media only screen and (max-width: 37.5em) {
+    .icon-box {
+      justify-content: center;
+      align-content: center; } }
 
-.date {
-  color: var(--color-4);
-  text-align: right; }
-  @media only screen and (max-width: 68.75em) {
-    .date {
-      text-align: left; } }
-  @media only screen and (max-width: 31.45em) {
-    .date {
-      text-align: center; } }
-
-.icon svg {
-  height: 2.5rem !important;
-  width: 2.5rem !important;
-  fill: var(--color-2) !important; }
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .icon svg {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    fill: var(--color-2) !important; }
+  .icon > span {
+    margin-right: .5rem; }
+    @media only screen and (max-width: 700px) {
+      .icon > span {
+        display: none; } }
 
 .ghost {
   display: none; }
+
+hgroup {
+  grid-area: header;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 37.5em) {
+    hgroup {
+      text-align: center; } }
 
 .header {
   display: flex;
@@ -395,52 +425,67 @@ strong {
     .header {
       justify-content: center; } }
 
+.text--presentation {
+  width: 80%;
+  text-align: center;
+  text-justify: auto;
+  margin: 0 auto 0 auto;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 68.75em) {
+    .text--presentation {
+      width: 100%; } }
+
 .text {
+  grid-area: text;
   width: 100%;
   font-weight: 200;
   text-align: justify;
   text-justify: auto;
   letter-spacing: 0.5px;
   font-size: 1.5rem; }
-  .text--hobbies {
-    margin-top: none; }
-  .text--presentation {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 0 auto; }
-    @media only screen and (max-width: 68.75em) {
-      .text--presentation {
-        width: 100%; } }
   @media only screen and (max-width: 68.75em) {
     .text {
       margin-top: 1rem; } }
 
-@media only screen and (max-width: 31.45em) {
+@media only screen and (max-width: 37.5em) {
   .option {
     text-align: center !important; } }
 
-.location {
-  font-weight: 200;
-  text-transform: capitalize;
-  --color-grey:rgb(56, 55, 55); }
+.icon-box {
+  grid-area: icon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; }
+  @media only screen and (max-width: 37.5em) {
+    .icon-box {
+      justify-content: center;
+      align-content: center; } }
 
-.date {
-  color: var(--color-4);
-  text-align: right; }
-  @media only screen and (max-width: 68.75em) {
-    .date {
-      text-align: left; } }
-  @media only screen and (max-width: 31.45em) {
-    .date {
-      text-align: center; } }
-
-.icon svg {
-  height: 2.5rem !important;
-  width: 2.5rem !important;
-  fill: var(--color-2) !important; }
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .icon svg {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    fill: var(--color-2) !important; }
+  .icon > span {
+    margin-right: .5rem; }
+    @media only screen and (max-width: 700px) {
+      .icon > span {
+        display: none; } }
 
 .ghost {
   display: none; }
+
+hgroup {
+  grid-area: header;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 37.5em) {
+    hgroup {
+      text-align: center; } }
 
 .project-head {
   grid-area: head-1; }

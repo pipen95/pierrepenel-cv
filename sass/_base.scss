@@ -50,7 +50,6 @@ h3 {
 }
 
 h1 {
-  
   color: var(--color-3);
   letter-spacing: 3px;
   margin-right: -8px;
@@ -108,9 +107,6 @@ h2 {
 
   @media only screen and (max-width: $bp-small) {
     margin-top: 1rem;
-  }
-
-  @media only screen and (max-width: $bp-smallest) {
     text-align: center;
   }
 
@@ -133,12 +129,21 @@ h2 {
 h3 {
   text-transform: uppercase;
   color: var(--color-2);
-  font-size: 1.5rem;
   letter-spacing: 0.5px;
+  font-size: 1.5rem;
+}
 
-  @media only screen and (max-width: $bp-smallest) {
-    text-align: center;
-  }
+h4 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: capitalize;
+  --color-grey:rgb(56, 55, 55);
+}
+
+h5 {
+  font-size: 1rem;
+  color: var(--color-4);
+  
 }
 
 .lien-web{

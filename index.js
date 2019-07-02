@@ -48,6 +48,47 @@
 				open3.addClass("ghost");
 			}
 		});
+
+		$(".js__open--4,.js__close--4").click(function() {
+			var open4 = $(".js__open--4");
+			var close4 = $(".js__close--4");
+			var menu4 = $(".js__block--4");
+			menu4.slideToggle(400);
+			if (open4.hasClass("ghost")) {
+				open4.removeClass("ghost");
+				close4.addClass("ghost");
+			} else {
+				close4.removeClass("ghost");
+				open4.addClass("ghost");
+			}
+		});
+
+		$(".js__open--5,.js__close--5").click(function() {
+			var open5 = $(".js__open--5");
+			var close5 = $(".js__close--5");
+			var menu5 = $(".js__block--5");
+			menu5.slideToggle(500);
+			if (open5.hasClass("ghost")) {
+				open5.removeClass("ghost");
+				close5.addClass("ghost");
+			} else {
+				close5.removeClass("ghost");
+				open5.addClass("ghost");
+			}
+		});
+		$(".js__open--6,.js__close--6").click(function() {
+			var open6 = $(".js__open--6");
+			var close6 = $(".js__close--6");
+			var menu6 = $(".js__block--6");
+			menu6.slideToggle(600);
+			if (open6.hasClass("ghost")) {
+				open6.removeClass("ghost");
+				close6.addClass("ghost");
+			} else {
+				close6.removeClass("ghost");
+				open6.addClass("ghost");
+			}
+		});
 	
 	})();
 	

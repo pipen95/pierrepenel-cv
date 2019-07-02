@@ -8,7 +8,22 @@
   }
 }
 
+
+.text--presentation {
+  width: 80%;
+  text-align: center;
+  text-justify: auto;
+  margin: 0 auto 0 auto;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+
+  @media only screen and (max-width:$bp-large){
+    width: 100%;
+  }
+}
+
 .text {
+  grid-area: text;
   width: 100%;
   font-weight: 200;
   text-align: justify;
@@ -16,61 +31,60 @@
   letter-spacing: 0.5px;
   font-size: 1.5rem;
 
-  &--hobbies {
-    margin-top: none;
-  }
-
-  &--presentation {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 0 auto;
-
-    @media only screen and (max-width:$bp-large){
-      width: 100%;
-    }
-  }
 
   @media only screen and (max-width:$bp-large){
     margin-top: 1rem;
   }
 }
 
-
-
 .option{
-  @media only screen and (max-width:$bp-smallest){
+  @media only screen and (max-width:$bp-small){
     text-align: center !important;
   }
 }
 
-.location {
-  font-weight: 200;
-  text-transform: capitalize;
-  --color-grey:rgb(56, 55, 55);
-}
-
-.date {
-  color: var(--color-4);
-  text-align: right;
-
-  @media only screen and (max-width:$bp-large){
-    text-align: left;
+.icon-box{
+  grid-area: icon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  @media only screen and (max-width: $bp-small) {
+   justify-content: center;
+   align-content: center;
   }
-  @media only screen and (max-width:$bp-smallest){
-    text-align:center;
-  }
+
 }
 
 .icon{
-  @extend %icon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
+  @extend %icon;
   & svg {
     height: 2.5rem !important;
     width: 2.5rem !important;
     fill: var(--color-2)!important;
   }
+
+  &>span{
+    margin-right: .5rem;
+    @media only screen and (max-width:700px){
+      display: none;
+    }
+  }
 }
 
 .ghost {
   display:none;
+}
+
+hgroup{
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-small) {
+    text-align: center;
+  }
 }
