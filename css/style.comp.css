@@ -293,24 +293,15 @@ strong {
 
 .skills {
   grid-area: content-4;
-  display: grid;
-  grid-template-columns: 10rem 2fr;
-  grid-template-rows: min-content;
-  column-gap: 1vw; }
-  .skills__list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    align-items: flex-start;
-    justify-items: flex-start; }
-  .skills__title {
-    display: flex;
-    align-self: start; }
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-evenly; }
   .skills__icon {
-    height: 3rem;
-    width: 3rem;
+    margin-bottom: 1.5rem;
     margin-right: 1.5rem;
-    margin-bottom: 1rem; }
+    height: 3rem;
+    width: 3rem; }
     .skills__icon :hover {
       cursor: pointer; }
 
